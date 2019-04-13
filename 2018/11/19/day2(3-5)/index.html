@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>PEP8代码风格指南 | 唐鸿湖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="PythonPEP8">
+  
+  
+  
+  
+  <meta name="description" content="#Day2-Python的基础 ##1.基本格式和快捷键python 加注释为代码前加一个#注释一般用来说明文字、如#print是Python中的内置函数，功能是在控制台输出括号里面的我内容。print(‘  ‘)为固定格式常用的快捷键 Ctrl+s—-保存ctrl+/    为注释和取消注释ctrl+b     为sublime中的编译执行ctrl+c    复制、拷贝ctrl+v    粘贴c">
+<meta name="keywords" content="Python,PEP8">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PEP8代码风格指南">
+<meta property="og:url" content="http://yoursite.com/2018/11/19/day2(3-5)/index.html">
+<meta property="og:site_name" content="唐鸿湖">
+<meta property="og:description" content="#Day2-Python的基础 ##1.基本格式和快捷键python 加注释为代码前加一个#注释一般用来说明文字、如#print是Python中的内置函数，功能是在控制台输出括号里面的我内容。print(‘  ‘)为固定格式常用的快捷键 Ctrl+s—-保存ctrl+/    为注释和取消注释ctrl+b     为sublime中的编译执行ctrl+c    复制、拷贝ctrl+v    粘贴c">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-04-13T06:14:15.295Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PEP8代码风格指南">
+<meta name="twitter:description" content="#Day2-Python的基础 ##1.基本格式和快捷键python 加注释为代码前加一个#注释一般用来说明文字、如#print是Python中的内置函数，功能是在控制台输出括号里面的我内容。print(‘  ‘)为固定格式常用的快捷键 Ctrl+s—-保存ctrl+/    为注释和取消注释ctrl+b     为sublime中的编译执行ctrl+c    复制、拷贝ctrl+v    粘贴c">
+  
+    <link rel="alternate" href="/atom.xml" title="唐鸿湖" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/fashion.css">
+  <link rel="stylesheet" href="/css/glyphs.css">
+
+</head>
+</html>
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner">
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="唐鸿湖" rel="home"> 唐鸿湖 </a>
+            
+          </h1>
+          
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows" style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class href="/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class href="/archives">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class href="/categories">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class href="/tags">Tags</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class href="/about">About</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-day2(3-5)" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost">
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      PEP8代码风格指南
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2018/11/19/day2(3-5)/" class="article-date">
+	  <time datetime="2018-11-19T15:58:18.000Z" itemprop="datePublished">November 19, 2018</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/语言基础/">语言基础</a>
+ 
+      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#Day2-Python的基础</p>
+<p>##1.基本格式和快捷键<br>python 加注释为代码前加一个#<br>注释一般用来说明文字、<br>如#print是Python中的内置函数，功能是在控制台输出括号里面的我内容。<br>print(‘  ‘)为固定格式<br>常用的快捷键 Ctrl+s—-保存<br>ctrl+/    为注释和取消注释<br>ctrl+b     为sublime中的编译执行<br>ctrl+c    复制、拷贝<br>ctrl+v    粘贴<br>ctrl+a    全选<br>ctrl+z    撤销<br>ctrl+shift+z   反撤销<br>ctrl+x    剪切<br>ctrl+f    查找<br>添加光标 为ctrl<br>按住shift不放 点鼠标    选择指定范围<br>按住ctrl不放   点鼠标     多光标操作</p>
+<p>##2.基本语法</p>
+<ol>
+<li>注释(注释就是代码中不参与执行的说明性文字)</li>
+<li>一行文字前面加#为单行注释</li>
+<li>多行注释为开始三个”  结尾三个“(用三个单引号或者三个双引号引起来，一般使用双引号)</li>
+<li>标识符(程序中用来命名的叫做标识符)</li>
+<li>Python中的标识符的要求：所有的标识符是由字母、数字和下划线组成，并且数字不能开头.</li>
+<li>在py3.x中标识符还可以包含中文。(不建议使用).<br>标识符（变量名、函数名、类名）<br>变量名 = 值<br>##3.行和缩进<br>###1. 代码前的空白叫缩进<br>Python中每行代码前缩进的个数是有规范的，不能随便缩进，也不能在该缩进的时候不缩进。<br>如果第一行未缩进，则之后的全部都不能缩进。</li>
+</ol>
+<p>##4.关键字<br>系统保留下来具有特殊意义的标识符（保留字）<br>py中的关键字[‘False’, ‘None’, ‘True’, ‘and’, ‘as’, ‘assert’, ‘break’, ‘class’, ‘continue’, ‘def’, ‘del’, ‘elif’, ‘else’, ‘except’, ‘finally’, ‘for’, ‘from’, ‘global’, ‘if’, ‘import’, ‘in’, ‘is’, ‘lambda’, ‘nonlocal’, ‘not’, ‘or’, ‘pass’, ‘raise’, ‘return’, ‘try’, ‘while’, ‘with’, ‘yield’]</p>
+<p>##5.常用的数据类型<br>int  - 整型(整数)   在py2.x中有long<br>float  - 浮点型(带小数点的数)<br>str  - 字符串，例如：’今天天气真好’(可双引号可单引号)<br>bool - 布尔类型  ：值只有True和false两个<br>list - 列表<br>dict - 字典<br>set - 集合<br>tuple - 元祖、迭代器、生成器、function<br>py中大小写敏感</p>
+<p>##6. 两个常用内置的函数<br>输出函数print()  - 在控制台输出括号中的内容<br>print(变量)、print(数据)如print(100)或print(‘哇咔咔’)，print(数据1，数据2，数据三。。。。)(打印多个数据)<br>注意：一个print打印的数据占一行，如果一个print同时打印多个数据，多个数据之间显示的时候使用空格隔开的<br>输入函数：input() - 从输入设置上获取输入的内容到程序中<br>输入结果 = input(提示信息)<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">result = input(<span class="string">'你吃饭了吗？'</span>)</span><br><span class="line">ask = input(<span class="string">'你吃饱了吧'</span>)</span><br><span class="line">print(<span class="string">'结果：'</span>,result，ask)</span><br></pre></td></tr></table></figure></p>
+<p>##7.变量</p>
+<p>###1. 什么是变量<br>变量是用来在内存中开辟空间保存数据的</p>
+<p>###2. 怎么声明/定义变量<br>语法：变量名 = 数据<br>说明；a，变量名就是标志符并且不能是关键字。(要求) (规范；见名知义   看到变量名大概知道能知道这个变量中存的声明数据)，<br> b. = -赋值符号，将赋值符号右边的数据赋给左边的变量(要求左边必须是变量)<br> c. = -数据可以是不同类型的值，也可以是已经声明过的变量或者是运算表达式<br>声明一个变量叫num，并且给它赋值为10(这个变量中保存的数据是10)<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">num = <span class="number">10</span></span><br><span class="line">student_name = <span class="string">'小明'</span></span><br><span class="line">num2 = <span class="number">12.5</span></span><br><span class="line">num3 = num  <span class="comment">#声明一个变量num3，并且将变量num中保存的值赋给num3</span></span><br><span class="line">print(num3)</span><br><span class="line">num4 = <span class="number">10</span>+<span class="number">12</span></span><br><span class="line">print(num4,num2)</span><br><span class="line"></span><br><span class="line">num = <span class="number">100</span>   <span class="comment">#已经声明过的变量可以重新赋值，新赋的值会覆盖原来的值</span></span><br><span class="line">num = <span class="string">'xiaohua'</span></span><br><span class="line">print(num)</span><br><span class="line"><span class="comment">###3.同时声明多个变量</span></span><br><span class="line">a=b=c= <span class="number">100</span>  <span class="comment">#同时声明多个变量赋相同的值</span></span><br><span class="line">print(a,b,c)</span><br><span class="line"></span><br><span class="line">a1,b1,c1 = <span class="number">10</span>,<span class="number">20</span>,<span class="number">30</span>  <span class="comment">#同时声明多个变量赋不同的值</span></span><br><span class="line">print(a1,b1,c1)</span><br></pre></td></tr></table></figure></p>
+<p>###4.python中声明变量和给变量赋值的基本原理<br>是先开辟空间将数据存起来，数据需要多大的空间就开辟多大的内存，然后再将变量指向对应的内存区域</p>
+<p>####计算机常识<br>8位(bit)  = 1字节(byte)<br>1024字节 = 1kb<br>1024kb = 1Mb<br>1024Mb = 1GB<br>1024GB = 1T</p>
+<p>##8.运算符<br>python 支持的运算符有：数学运算符、比较运算符、逻辑运算符、赋值运算符、(位运算符)<br>数学运算符：+（加）、-（减）、单星号（乘）、/（除）、//(整除)、%(取余)、双星号(幂运算)<br>前面的+、-、星号、/和数学中的加减乘除的功能一模一样<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="number">100</span>+<span class="number">11</span>)    <span class="comment">#111</span></span><br><span class="line">print(<span class="number">100</span><span class="number">-11</span>)    <span class="comment">#89</span></span><br><span class="line">print(<span class="number">8</span>星号<span class="number">9</span>)       <span class="comment">#72</span></span><br><span class="line">print(<span class="number">5</span>/<span class="number">2</span>)       <span class="comment">#2.5</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">求商，结果只保留整数部分</span></span><br><span class="line"><span class="string">print(5//2)   #2</span></span><br><span class="line"><span class="string">print(4.2//2)  #2</span></span><br><span class="line"><span class="string">% - 求余数</span></span><br></pre></td></tr></table></figure></p>
+<p>双星号 —求次方<br>先算幂运算再算乘除<br>有小括号的先算括号里面的(和小学数学相同)</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/语言基础/">语言基础</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PEP8/">PEP8</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTQ4MS82MDQ5">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/11/19/字符串/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">PEP8代码风格指南</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav">None</ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2019 唐鸿湖 All Rights Reserved.
+        
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>

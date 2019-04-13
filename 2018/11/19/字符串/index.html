@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>PEP8代码风格指南 | 唐鸿湖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="PythonPEP8">
+  
+  
+  
+  
+  <meta name="description" content="#Python3字符串     ##Python访问字符串中的值Python中的字符串用单引号(‘)或双引号(“)括起来，同时使用反斜杠()转义特殊字符。获取字符串中的单个字符的语法格式如下:   字符串变量[下标]注意：下标的返回是0~字符串长度-1    # 获取第一个字符    print(var[0])    # 获取第3个字符    print(var[2])    # 获取最后一个字符">
+<meta name="keywords" content="Python,PEP8">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PEP8代码风格指南">
+<meta property="og:url" content="http://yoursite.com/2018/11/19/字符串/index.html">
+<meta property="og:site_name" content="唐鸿湖">
+<meta property="og:description" content="#Python3字符串     ##Python访问字符串中的值Python中的字符串用单引号(‘)或双引号(“)括起来，同时使用反斜杠()转义特殊字符。获取字符串中的单个字符的语法格式如下:   字符串变量[下标]注意：下标的返回是0~字符串长度-1    # 获取第一个字符    print(var[0])    # 获取第3个字符    print(var[2])    # 获取最后一个字符">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-04-13T06:14:29.040Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PEP8代码风格指南">
+<meta name="twitter:description" content="#Python3字符串     ##Python访问字符串中的值Python中的字符串用单引号(‘)或双引号(“)括起来，同时使用反斜杠()转义特殊字符。获取字符串中的单个字符的语法格式如下:   字符串变量[下标]注意：下标的返回是0~字符串长度-1    # 获取第一个字符    print(var[0])    # 获取第3个字符    print(var[2])    # 获取最后一个字符">
+  
+    <link rel="alternate" href="/atom.xml" title="唐鸿湖" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/fashion.css">
+  <link rel="stylesheet" href="/css/glyphs.css">
+
+</head>
+</html>
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner">
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="唐鸿湖" rel="home"> 唐鸿湖 </a>
+            
+          </h1>
+          
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows" style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class href="/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class href="/archives">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class href="/categories">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class href="/tags">Tags</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class href="/about">About</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-字符串" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost">
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      PEP8代码风格指南
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2018/11/19/字符串/" class="article-date">
+	  <time datetime="2018-11-19T15:58:18.000Z" itemprop="datePublished">November 19, 2018</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/语言基础/">语言基础</a>
+ 
+      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#Python3字符串    </p>
+<p>##Python访问字符串中的值<br>Python中的字符串用单引号(‘)或双引号(“)括起来，同时使用反斜杠()转义特殊字符。<br>获取字符串中的单个字符的语法格式如下:  </p>
+<font color="#00aa00">字符串变量[下标]</font><br>注意：下标的返回是0~字符串长度-1<br><br>    # 获取第一个字符<br>    print(var[0])<br><br>    # 获取第3个字符<br>    print(var[2])<br><br>    # 获取最后一个字符<br>    print(var[-1])<br><br>    # 获取倒数第二个字符<br>    print(var[-2])<br>–<br>字符串的截取的语法格式如下：<br><font color="#00aa00"> 字符串变量[头下标:尾下标] </font>    
+
+<pre><code># 获取从第2个开始到第3个的所有字符
+print(var[1:3])
+
+# 获取从第一个开始到第4个的所有字符
+print(var[:4])
+
+# 获取从第三个字符开始后面所有的字符
+print(var[2:])
+
+# 获取从第4个字符开始到倒数第二个的所有字符
+print(var[4:-1])
+</code></pre><p>– </p>
+<p>##Python字符串运算符<br>下表实例变量a值为字符串 “Hello”，b变量值为 “Python”：  </p>
+<table>
+<thead>
+<tr>
+<th>操作符</th>
+<th>描述</th>
+<th>实例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>|字符串连接|    a + b 输出结果： HelloPython<br><em>|重复输出字符串    |a</em>2 输出结果：HelloHello<br>[]|通过索引获取字符串中字符|    a[1] 输出结果 e<br>[ : ]|截取字符串中的一部分|    a[1:4] 输出结果 ell<br>in|成员运算符 - 如果字符串中包含给定的字符返回 True|    ‘H’ in a 输出结果 1<br>not in|成员运算符 - 如果字符串中不包含给定的字符返回 True|    ‘M’ not in a 输出结果 1<br>r/R|原始字符串 - 原始字符串：所有的字符串都是直接按照字面的意思来使用,没有转义特殊或不能打印的字符。 原始字符串除在字符串的第一个引号前加上字母 r（可以大小写）以外，与普通字符串有着几乎完全相同的语法。    |print( r’\n’ )print( R’\n’ )<br>%|格式字符串    |  </p>
+<p>a = ‘Hello’<br>b = ‘Python’  </p>
+<p>print(a + ‘ ‘ + b)   # 打印：Hello Python  </p>
+<p>str1 = a * 3<br>print(str1)  # 打印:HelloHelloHello  </p>
+<p>re = ‘He’ in a<br>print(re)    # 打印：True  </p>
+<p>re = ‘He’ not in a<br>print(re)   # 打印: False  </p>
+<p>​<br>##Python字符串格式化<br>Python 支持格式化字符串的输出 。尽管这样可能会用到非常复杂的表达式，但最基本的用法是将一个值插入到一个有字符串格式符 %s 的字符串中。<br>在 Python 中，字符串格式化使用与 C 中 sprintf 函数一样的语法。  </p>
+<p> print (“我叫 %s 今年 %d 岁!” % (‘小明’, 10))  </p>
+</li>
+</ul>
+<p>python字符串格式化符号: </p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p> %c    | 格式化字符及其ASCII码<br> %s    | 格式化字符串<br>      %d| 格式化整数<br>      %u    | 格式化无符号整型<br>      %o    | 格式化无符号八进制数<br>      %x    | 格式化无符号十六进制数<br>      %X    | 格式化无符号十六进制数（大写）<br>      %f    | 格式化浮点数字，可指定小数点后的精度<br>      %e    | 用科学计数法格式化浮点数<br>      %E    | 作用同%e，用科学计数法格式化浮点数<br>      %g    | %f和%e的简写<br>      %G    | %f 和 %E 的简写</p>
+<p>–</p>
+<p>##Python 的字符串内建函数<br>Python 的字符串常用内建函数如下：  </p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>1    |capitalize()|将字符串的第一个字符转换为大写<br>2|    center(width, fillchar)|返回一个指定的宽度 width 居中的字符串，fillchar 为填充的字符，默认为空格。<br>3|    count(str)|返回 str 在 string 里面出现的次数<br>4|    bytes.decode(encoding=”utf-8”, errors=”strict”)|Python3 中没有 decode 方法，但我们可以使用 bytes 对象的 decode() 方法来解码给定的 bytes 对象，这个 bytes 对象可以由 str.encode() 来编码返回。<br>5|    encode(encoding=’UTF-8’,errors=’strict’)|以 encoding 指定的编码格式编码字符串，如果出错默认报一个ValueError 的异常，除非 errors 指定的是’ignore’或者’replace’<br>6|    endswith(suffix)|检查字符串是否以 obj 结束，如果beg 或者 end 指定则检查指定的范围内是否以 obj 结束，如果是，返回 True,否则返回 False.<br>7|    expandtabs(tabsize=8)|把字符串 string 中的 tab 符号转为空格，tab 符号默认的空格数是 8 。<br>8|    find(str, beg=0 end=len(string))|检测 str 是否包含在字符串中，如果指定范围 beg 和 end ，则检查是否包含在指定范围内，如果包含返回开始的索引值，否则返回-1<br>9|    index(str, beg=0, end=len(string))|跟find()方法一样，只不过如果str不在字符串中会报一个异常.<br>10|    isalnum()|如果字符串至少有一个字符并且所有字符都是字母或数字则返 回 True,否则返回 False<br>11|    isalpha()|如果字符串至少有一个字符并且所有字符都是字母则返回 True, 否则返回 False<br>12    |isdigit()|如果字符串只包含数字则返回 True 否则返回 False..<br>13    |islower()|如果字符串中包含至少一个区分大小写的字符，并且所有这些(区分大小写的)字符都是小写，则返回 True，否则返回 False<br>14    |isnumeric()|如果字符串中只包含数字字符，则返回 True，否则返回 False（中文数字也可以）<br>15    |isspace()|如果字符串中只包含空白，则返回 True，否则返回 False.<br>16|    istitle()|如果字符串是标题化的(见 title())则返回 True，否则返回 False<br>17|isupper()|如果字符串中包含至少一个区分大小写的字符，并且所有这些(区分大小写的)字符都是大写，则返回 True，否则返回 False<br>18|    join(seq)|以指定字符串作为分隔符，将 seq 中所有的元素(的字符串表示)合并为一个新的字符串<br>19|    len(string)|返回字符串长度<br>20|    ljust(width[, fillchar])|返回一个原字符串左对齐,并使用 fillchar 填充至长度 width 的新字符串，fillchar 默认为空格。<br>21    |lower()|转换字符串中所有大写字符为小写.<br>22    |lstrip()|截掉字符串左边的空格或指定字符。<br>23|    maketrans()|创建字符映射的转换表，对于接受两个参数的最简单的调用方式，第一个参数是字符串，表示需要转换的字符，第二个参数也是字符串表示转换的目标。<br>24    |max(str)|返回字符串 str 中最大的字母。<br>25|    min(str)|返回字符串 str 中最小的字母。<br>26    |replace(old, new [, max])|把 将字符串中的 str1 替换成 str2,如果 max 指定，则替换不超过 max 次。<br>27    |rfind(str, beg=0,end=len(string))|类似于 find()函数，不过是从右边开始查找.<br>28    |rindex( str, beg=0, end=len(string))|类似于 index()，不过是从右边开始.<br>29|     rjust(width,[, fillchar])|返回一个原字符串右对齐,并使用fillchar(默认空格）填充至长度 width 的新字符串<br>30    |rstrip()|删除字符串字符串末尾的空格.<br>31    |split(str=””, num=string.count(str))|num=string.count(str)) 以 str 为分隔符截取字符串，如果 num 有指定值，则仅截取 num 个子字符串<br>32    |splitlines([keepends])|按照行(‘\r’, ‘\r\n’, \n’)分隔，返回一个包含各行作为元素的列表，如果参数 keepends 为 False，不包含换行符，如果为 True，则保留换行符。<br>33    |startswith(str, beg=0,end=len(string))|检查字符串是否是以 obj 开头，是则返回 True，否则返回 False。如果beg 和 end 指定值，则在指定范围内检查。<br>34    |strip([chars])|在字符串上执行 lstrip()和 rstrip()<br>35    |swapcase()|将字符串中大写转换为小写，小写转换为大写<br>36    |title()|返回”标题化”的字符串,就是说所有单词都是以大写开始，其余字母均为小写(见 istitle())<br>37    |translate(table, deletechars=””)|根据 str 给出的表(包含 256 个字符)转换 string 的字符, 要过滤掉的字符放到 deletechars 参数中<br>38    |upper()|转换字符串中的小写字母为大写<br>39    |zfill (width)|返回长度为 width 的字符串，原字符串右对齐，前面填充0<br>40    |isdecimal()|检查字符串是否只包含十进制字符，如果是返回 true，否则返回 false。</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/语言基础/">语言基础</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PEP8/">PEP8</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTQ4MS82MDQ5">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/11/19/day2(3-5)/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          PEP8代码风格指南
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav">None</ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2019 唐鸿湖 All Rights Reserved.
+        
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>
